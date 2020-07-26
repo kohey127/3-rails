@@ -30,9 +30,13 @@ class TodolistsController < ApplicationController
   	redirect_to todolist_path(list.id)
   end
 
+  def destroy
+  	
+  end
+
   # ストロングパラメータ
   private
   def list_params
-  	params.require(:list).permit(:title, :body)
+  	params.require(:list).permit(:title, :body, :image)
   end
 end
